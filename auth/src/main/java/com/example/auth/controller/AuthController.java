@@ -20,6 +20,7 @@ import java.time.Instant;
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
+@CrossOrigin
 public class AuthController {
 
     private final UserRepository userRepo;
