@@ -1,0 +1,32 @@
+Step 1: First register the user with json body
+
+Expected Response:
+
+ {
+  "username": "vikki",
+  "password": "12345"
+}
+
+
+step 2: Now login the user again
+
+with this payload {
+  "username": "vikki",
+  "password": "12345"
+}
+
+
+it's give you a response: token or refreshtoken
+
+step3: Get register user with send the Bearer token in authorization
+
+then it give the user body or invalid or expired token but if refresh token is still valid then 
+you can call the /refresh token api with payload
+
+ {
+    "token":"e55c0508-e81f-4578-800f-6a09cecb4c48" -- (this refresh token is similar of got refresh token at the time of login)
+}
+
+
+step 4: if refresh token is valid then it can give new token or refresh token you can get the users again through the new bearer token 
+
