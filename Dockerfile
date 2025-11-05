@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . .
 
 # Build the jar
-RUN ./mvn clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # 2) Run Stage
 FROM eclipse-temurin:17-jdk-jammy
